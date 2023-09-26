@@ -7,3 +7,19 @@ BEGIN
 END;
  procedure
 EXEC sp_ListarAutores;
+
+
+2-
+
+CREATE PROCEDURE sp_LivrosPorCategoria
+    @CategoriaNome NVARCHAR(255)
+AS
+BEGIN
+    SELECT Livros.*
+    FROM Livros
+    INNER JOIN Categorias ON Livros.Categoria_ID = Categorias.Categoria_ID
+    WHERE Categorias.Nome = @CategoriaNome;
+END;
+
+EXEC sp_LivrosPorCategoria 'Ficção';
+EXEC sp_LivrosPorCategoria 'Não Ficção';
