@@ -140,3 +140,22 @@ BEGIN
     FROM Autor
     ORDER BY DataNascimento ASC;
 END;
+
+
+9- 
+
+-- Stored Procedure: sp_ListarAutores
+-- Descrição: Esta stored procedure lista todos os autores no banco de dados.
+-- Autor: [Rafael Rodrigues de Almeida ]
+-- Data de Criação: [03/05]
+-- Última Modificação: [11/09]
+
+-- Parâmetros:
+-- Nenhum
+
+CREATE PROCEDURE sp_ListarAutores
+AS
+BEGIN
+    SELECT Nome, Sobrenome
+    FROM Autor;
+END;
