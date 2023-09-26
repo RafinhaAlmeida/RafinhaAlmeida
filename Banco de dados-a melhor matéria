@@ -60,3 +60,14 @@ BEGIN
 END;
 
 
+5-
+
+CREATE PROCEDURE sp_LivrosAteAno
+    @Ano INT
+AS
+BEGIN
+    SELECT Titulo
+    FROM Livro
+    WHERE AnoPublicacao <= @Ano;
+END;
+
