@@ -130,3 +130,13 @@ BEGIN
     END CATCH
 END;
 
+
+8-
+
+CREATE PROCEDURE sp_AutorMaisAntigo
+AS
+BEGIN
+    SELECT TOP 1 Nome, Sobrenome
+    FROM Autor
+    ORDER BY DataNascimento ASC;
+END;
